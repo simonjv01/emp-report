@@ -52,3 +52,20 @@
               05. filler             pic x(04).
 
        fd  OUTPUT-FILE.
+       01  rep-file-rec.             pic x(150).
+
+       working-storage section.
+
+      * cobol level 88 condition clause.
+       01  ws-switch.
+           05 end-of-file-switch     pic x(01) value 'n'.
+              88 end-of-file                   value 'y'.
+              88 not-end-of-file               value 'n'.
+
+      * Temporary variables.
+       01  ws-temp-pgm-vals.
+           05 ws-emply-name          pic x(30) value spaces.
+           05 ws-pointer-fld-1       pic s9(03) value zeros.
+           05 ws-emply-add.
+              10 ws-add-ln1          pic x(20) value spaces.
+              10 ws-add-eircde       pic x(08) value spaces.  
