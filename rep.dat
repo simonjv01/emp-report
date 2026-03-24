@@ -1,0 +1,36 @@
+                                                             EMPLOYEE MANAGEMENT SYSTEM.                                                02/04/2023.
+                                                                      DUBLIN, IRL
+    EMPNO    EMP FULL NAME                        ADD LN         COUNTY    EIR CODE   COUNTRY CODE    ED LEVEL  SEX  BIRTH DATE      SALARY
+       10  I DAVID, HAAS                    25, The Crescent     DUBLIN    D09 F821      IRL             18      F   24/08/1963     00183.30
+       20  L CHRISTINE, THOMPSON            24, Second Avenue    DUBLIN    H65 WD54      IRL             18      M   02/02/1978     09425.00
+       30  A MICHAEL, KWAN                  01, Villa Nalchez    MEATH     A92 AHZ       IRL             20      F   11/05/1971     09825.00
+       50  B SALLY, GEYER                   24, Second Avenue    DUBLIN    D15 TC90      IRL             16      M   15/09/1955     08017.50
+       60  F JOHN, STERN                    24, Second Avenue    OFFALY    D09 VK51      IRL             16      M   07/07/1975     07225.00
+       70  D IRVING, PULASKI                80, Middle Avenue    DUBLIN    W91 F634      IRL             16      F   26/05/2003     09617.00
+       90  W EVA, HENDERSON                 50, Arbor Road       MEATH     D01 W2C9      IRL             16      F   15/05/1971     08975.00
+      100  Q EILEEN, SPENSER                80, Middle Avenue    CLARE     W91 AD76      IRL             14      M   18/12/1980     08615.00
+      110  G THEODORE, LUCCHESSI            25, Fernhill Road    OFFALY    D20 VP26      IRL             19      M   05/11/1959     06650.00
+      120    SEAN, O'CONNELL                10, Middlefield Roa  OFFALY    D03 YH36      IRL             14      M   18/10/1972     04925.00
+      130  M DELORES, QUINTANA              21, Euclid Avenue.   CLARE     K78 Y0F1      IRL             16      F   15/09/1955     07380.00
+      140  A HEATHER, NICHOLLS              10, Middlefield Roa  GALWAY    D17 Y738      IRL             18      F   19/01/1976     06842.00
+      150    BRUCE, ADAMSON                 39, Marine Parkway.  CLARE     R14 EH50      IRL             16      M   17/05/1977     05528.00
+      160  R ELIZABETH, PIANKA              66, Veterans Blvd.   TIPPERAR  E91 A7D8      IRL             17      F   12/04/1980     06225.00
+      170  J MASATOSHI, YOSHIMURA           15, Valencia Street  MEATH     D12 K303      IRL             16      M   05/01/1981     04468.00
+      180  S MARILYN, SCOUTTEN              11, South Bernardo   MEATH     D11 AY91      IRL             17      F   21/02/1979     05134.00
+      190  H JAMES, WALKER                  40, South Spruce Av  MEATH     D18 KX28      IRL             16      M   25/06/1982     05045.00
+      200    DAVID, BROWN                   11, Fifth Avenue     DUBLIN    D12 VY8A      IRL             16      M   29/05/1971     05774.00
+      210  T WILLIAM, JONES                 19, West 39th Avenu  MEATH     H91 K526      IRL             17      M   23/02/2003     06827.00
+      220  K JENNIFER, LUTZ                 12, El Camino Real   GALWAY    D18 KX28      IRL             18      F   19/03/1978     04984.00
+      230  J JAMES, JEFFERSON               20, Avenue           DUBLIN    A94 EK75      IRL             14      M   30/05/1980     04218.00
+      240  M SALVATORE, MARINO              25, The Crescent     DUBLIN    D09 F821      IRL             17      M   31/03/2002     04876.00
+      250  S DANIEL, SMITH                  26, Second Avenue    DUBLIN    H65 WD54      IRL             15      M   12/11/1969     04918.00
+      260  P SYBIL, JOHNSON                 27, Second Avenue    DUBLIN    D15 TC90      IRL             16      F   05/10/1976     04725.00
+      270  L MARIA, PEREZ                   80, Middle Avenue    DUBLIN    W91 F634      IRL             15      F   26/05/2003     03738.00
+      280  R ETHEL, SCHNEIDER               50, Arbor Road       MEATH     D01 W2C9      IRL             17      F   28/03/1976     03625.00
+      290  R JOHN, PARKER                   39, Marine Parkway.  CLARE     R14 EH50      IRL             12      M   09/07/1985     03534.00
+      300  X PHILIP, SMITH                  66, Veterans Blvd.   TIPPERAR  E91 A7D8      IRL             14      M   27/10/1976     03775.00
+      310  F MAUDE, SETRIGHT                15, Valencia Street  MEATH     D12 K303      IRL             12      F   21/04/1961     03590.00
+      320  T RAMLAL, MEHTA                  18, South Bernardo   MEATH     D11 AY91      IRL             16      M   11/08/1962     03995.00
+*
+    TOTAL NO OF RECORD READ  : 00030
+    TOTAL NO OF RECORD PRINT : 00030

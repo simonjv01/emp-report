@@ -33,7 +33,7 @@
        file section.
        fd  INPUT-FILE.
        01  in-emprec.
-              05  in-emp-no          pic 9(6).
+              05  in-empno           pic 9(6).
               05  in-firstname       pic x(12).
               05  in-midinit         pic x(01).
               05  in-lastname        pic x(17).
@@ -68,4 +68,15 @@
            05 ws-pointer-fld-1       pic s9(03) value zeros.
            05 ws-emply-add.
               10 ws-add-ln1          pic x(20) value spaces.
-              10 ws-add-eircde       pic x(08) value spaces.  
+              10 ws-add-eircde       pic x(08) value spaces.
+              10 WS-ADD-CONTY         PIC X(10)       VALUE SPACES.
+              10 WS-ADD-CONTRY-CDE    PIC X(03)       VALUE SPACES.
+           05 WS-POINTER-FLD-2       PIC S9(03)      VALUE ZEROES.
+           05 WS-EFILE-ST            PIC 9(02)       VALUE ZEROES. 
+           05 WS-RFILE-ST            PIC 9(02)       VALUE ZEROES.
+
+       01 WS-COUNTERS.
+           05 WS-INP-REC             PIC 9(05).
+           05 WS-OUT-REC             PIC 9(05).
+           05 WS-SKIP-REC            PIC 9(05).
+          
