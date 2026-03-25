@@ -106,4 +106,9 @@
               10 FILLER               PIC X(01) VALUE '/'.
               10 HD-DTE-YYYY          PIC X(04) VALUE SPACES.
               10 FILLER               PIC X(01) VALUE '.'.
-      10 FILLER               PIC X(03) VALUE SPACES.    
+              10 FILLER               PIC X(03) VALUE SPACES.    
+
+       01 HEAD2.
+           05 FILLER                 PIC X(70) VALUE SPACES.
+           05 FILLER                 PIC X(11) VALUE 'DUBLIN, IRL'.
+           05 FILLER                 PIC X(69) VALUE SPACES.
