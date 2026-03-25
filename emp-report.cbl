@@ -79,4 +79,16 @@
            05 WS-INP-REC             PIC 9(05).
            05 WS-OUT-REC             PIC 9(05).
            05 WS-SKIP-REC            PIC 9(05).
-          
+
+       01 WS-TEMP-DATE.
+           05 WS-HDTE                 PIC 9(08).
+           05 THIS REDEFINES WS-HDTE.
+              10 WS-HDTE-DD           PIC X(02).
+              10 WS-HDTE-MM           PIC X(02).
+              10 WS-HDTE-YYYY         PIC X(04).
+           05 WS-TDY-DTE PIC 9(08).
+           05 THIS REDEFINES WS-TDY-DTE.
+              10 WS-TDYDTE-YYYY       PIC 9(04).
+              10 WS-TDYDTE-MM         PIC 9(02).
+              10 WS-TDYDTE-DD         PIC 9(02).
+           66 WS-TODAYS-DTE RENAMES WS-TDYDTE-YYYY THRU WS-TDYDTE-DD.
