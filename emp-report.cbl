@@ -92,3 +92,18 @@
               10 WS-TDYDTE-MM         PIC 9(02).
               10 WS-TDYDTE-DD         PIC 9(02).
            66 WS-TODAYS-DTE RENAMES WS-TDYDTE-YYYY THRU WS-TDYDTE-DD.
+
+       01 HEAD1.
+           05 FILLER                 PIC X(60)       VALUE SPACES.
+           05 FILLER                 PIC X(10) VALUE ' EMPLOYEE '.
+           05 FILLER                 PIC X(25) 
+                                             VALUE 'MANAGEMENT SYSTEM.'.
+           05 FILLER                 PIC X(41) VALUE SPACES.
+           05 HD-DTE.
+              10 HD-DTE-DD            PIC X(02) VALUE SPACES.
+              10 FILLER               PIC X(01) VALUE '/'.
+              10 HD-DTE-MM            PIC X(02) VALUE SPACES.
+              10 FILLER               PIC X(01) VALUE '/'.
+              10 HD-DTE-YYYY          PIC X(04) VALUE SPACES.
+              10 FILLER               PIC X(01) VALUE '.'.
+      10 FILLER               PIC X(03) VALUE SPACES.    
