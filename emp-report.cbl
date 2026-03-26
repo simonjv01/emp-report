@@ -164,3 +164,9 @@
            05 FILLER                 PIC X(03) VALUE SPACES.
            05 DTL-SALARY             PIC ZZZZZZ9.99.
            05 FILLER                 PIC X(10) VALUE SPACES.
+
+       01 TRL-LINE.
+017200     05 FILLER                 PIC X(04) VALUE SPACES.
+017300     05 TRL-LINE-MSG           PIC X(27) VALUE SPACES.
+017400     05 TRL-COUNT              PIC 9(05) VALUE ZEROES.
+017500     05 FILLER                 PIC X(114) VALUE SPACES.
