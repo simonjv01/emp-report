@@ -136,3 +136,30 @@
            05 FILLER                 PIC X(06) VALUE SPACES.
            05 FILLER                 PIC X(06) VALUE 'SALARY'.
            05 FILLER                 PIC X(11) VALUE SPACES.
+
+       01 DTL-LINE.
+           05 FILLER                 PIC X(03) VALUE SPACES.
+           05 DTL-EMPNO              PIC Z(06).
+           05 FILLER                 PIC X(02) VALUE SPACES.
+           05 DTL-FULL-NME           PIC X(30).
+           05 FILLER                 PIC X(02) VALUE SPACES.
+           05 DTL-ADD-LN             PIC X(20).
+           05 FILLER                 PIC X(02) VALUE SPACES.
+           05 DTL-COUNTY             PIC X(08).
+           05 FILLER                 PIC X(02) VALUE SPACES.
+           05 DTL-EIR-CDE            PIC X(08).
+           05 FILLER                 PIC X(06) VALUE SPACES.
+           05 DTL-COUNTRY-CDE        PIC X(03).
+           05 FILLER                 PIC X(13) VALUE SPACES.
+           05 DTL-EDLEVEL            PIC Z(02).
+           05 FILLER                 PIC X(06) VALUE SPACES.
+           05 DTL-SEX                PIC X(01).
+           05 FILLER                 PIC X(03) VALUE SPACES.
+           05 DTL-BIRTHDATE.
+             10 DTL-BRTHDATE-DD      PIC 9(02).
+             10 FILLER               PIC X(01) VALUE '/'.
+             10 DTL-BRTHDATE-MM      PIC 9(02).
+             10 FILLER               PIC X(01) VALUE '/'.           10 DTL-BRTHDATE-YYYY    PIC 9(04).
+           05 FILLER                 PIC X(03) VALUE SPACES.
+           05 DTL-SALARY             PIC ZZZZZZ9.99.
+           05 FILLER                 PIC X(10) VALUE SPACES.
