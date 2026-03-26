@@ -159,7 +159,8 @@
              10 DTL-BRTHDATE-DD      PIC 9(02).
              10 FILLER               PIC X(01) VALUE '/'.
              10 DTL-BRTHDATE-MM      PIC 9(02).
-             10 FILLER               PIC X(01) VALUE '/'.           10 DTL-BRTHDATE-YYYY    PIC 9(04).
+             10 FILLER               PIC X(01) VALUE '/'.    
+             10 DTL-BRTHDATE-YYYY    PIC 9(04).
            05 FILLER                 PIC X(03) VALUE SPACES.
            05 DTL-SALARY             PIC ZZZZZZ9.99.
            05 FILLER                 PIC X(10) VALUE SPACES.
