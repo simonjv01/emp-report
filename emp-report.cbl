@@ -112,3 +112,27 @@
            05 FILLER                 PIC X(70) VALUE SPACES.
            05 FILLER                 PIC X(11) VALUE 'DUBLIN, IRL'.
            05 FILLER                 PIC X(69) VALUE SPACES.
+
+       01 COLHEAD3.
+           05 FILLER                 PIC X(04) VALUE SPACES.
+           05 FILLER                 PIC X(05) VALUE 'EMPNO'.
+           05 FILLER                 PIC X(02) VALUE SPACES.
+           05 FILLER                 PIC X(06) VALUE '  EMP '.
+           05 FILLER                 PIC X(15) VALUE 'FULL NAME'.
+           05 FILLER                 PIC X(18) VALUE SPACES.
+           05 FILLER                 PIC X(06) VALUE 'ADD LN'.
+           05 FILLER                 PIC X(09) VALUE SPACES.
+           05 FILLER                 PIC X(06) VALUE 'COUNTY'.
+           05 FILLER                 PIC X(04) VALUE SPACES.
+           05 FILLER                 PIC X(08) VALUE 'EIR CODE'.
+           05 FILLER                 PIC X(03) VALUE SPACES.
+           05 FILLER                 PIC X(12) VALUE 'COUNTRY CODE'.
+           05 FILLER                 PIC X(04) VALUE SPACES.
+           05 FILLER                 PIC X(08) VALUE 'ED LEVEL'.
+           05 FILLER                 PIC X(02) VALUE SPACES.
+           05 FILLER                 PIC X(03) VALUE 'SEX'.
+           05 FILLER                 PIC X(02) VALUE SPACES.
+           05 FILLER                 PIC X(10) VALUE 'BIRTH DATE'.
+           05 FILLER                 PIC X(06) VALUE SPACES.
+           05 FILLER                 PIC X(06) VALUE 'SALARY'.
+           05 FILLER                 PIC X(11) VALUE SPACES.
