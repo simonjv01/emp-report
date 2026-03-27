@@ -216,3 +216,15 @@
       *     *--------------------------------------------------------*
        b099-exit.
            exit.
+
+      *    This section prints the report headers and populate todays
+      *    date in the report header.
+       c000-prnt-hdrs section.
+       c010-move-tdy-date.
+           accept ws-tdy-dte from date yyyymmdd
+            move ws-tdydte-dd to hd-dte-dd
+            move ws-tdydte-mm to hd-dte-mm
+            move ws-tdydte-yyyy to hd-dte-yyyy.
+
+       c099-exit.
+           exit.   
