@@ -166,11 +166,11 @@
            05 FILLER                 PIC X(10) VALUE SPACES.
 
        01 TRL-LINE.
-017200     05 FILLER                 PIC X(04) VALUE SPACES.
-017300     05 TRL-LINE-MSG           PIC X(27) VALUE SPACES.
-017400     05 TRL-COUNT              PIC 9(05) VALUE ZEROES.
-017500     05 FILLER                 PIC X(114) VALUE SPACES.
-017700 01 RPT-BLK-LNE.
-017800   05 RPT-BLK-AST            PIC X(01) VALUE '*'.
-017900   05 RPT-BLK-SPC            PIC X(149) VALUE SPACES.
-018000*
+            05 FILLER                 PIC X(04) VALUE SPACES.
+           05 TRL-LINE-MSG           PIC X(27) VALUE SPACES.
+           05 TRL-COUNT              PIC 9(05) VALUE ZEROES.
+           05 FILLER                 PIC X(114) VALUE SPACES.
+
+       01 RPT-BLK-LNE.
+           05 RPT-BLK-AST            PIC X(01) VALUE '*'.
+           05 RPT-BLK-SPC            PIC X(149) VALUE SPACES.
