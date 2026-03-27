@@ -187,3 +187,15 @@
        repfile-error.
            display 'Report file error - ', WS-RFILE-ST.
        end-declaratives.
+
+      * Core business logic of the program.
+       0000-core-business-logic.
+           perform a000-init-vals
+           perform b000-open-files
+           perform c000-prnt-hdrs
+           perform d000-proc-recd 
+           perform x000-clse-file 
+           stop run.
+
+           
+           
