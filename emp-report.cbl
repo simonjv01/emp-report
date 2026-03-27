@@ -174,3 +174,16 @@
        01 RPT-BLK-LNE.
            05 RPT-BLK-AST            PIC X(01) VALUE '*'.
            05 RPT-BLK-SPC            PIC X(149) VALUE SPACES.
+       
+       procedure division.
+       declaratives
+       decl-empfile section.
+           use after error procedure on emp-file.
+       empfile-error.
+           display 'EMPLoyee file error - ', WS-EFILE-ST.
+
+       decl-repfile section.
+           use after error procedure on rep-file.
+       repfile-error.
+           display 'Report file error - ', WS-RFILE-ST.
+       end-declaratives.
