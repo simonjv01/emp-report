@@ -196,6 +196,14 @@
            perform d000-proc-recd 
            perform x000-clse-file 
            stop run.
-
-           
-           
+      *     *--------------------------------------------------------*
+      *   This section initialized all working-storage variables to their default values. 
+       a000-init-vals section.
+       a010-init-tmp-vals.
+           initialize ws-counters, dtl-line, ws-temp-date,
+                    ws-temp-pgm-vals.
+      *     *--------------------------------------------------------*    
+       a099-exit.
+           exit.
+      *     *--------------------------------------------------------*    
+      
