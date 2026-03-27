@@ -206,4 +206,13 @@
        a099-exit.
            exit.
       *     *--------------------------------------------------------*    
-      
+
+      *     *--------------------------------------------------------*
+      *   This section opens the input and output files for processing.
+       b000-open-files section.    
+       b010-open-files.
+           open input emp-FILE
+                output rep-FILE.
+      *     *--------------------------------------------------------*
+       b099-exit.
+           exit.
