@@ -272,3 +272,25 @@
            inspect ws-add-eircde
              replacing all "." by " ".
                                      
+       e040-convert-string.
+           inspect ws-add-conty converting 
+             'abcdefghijklmnopqrstuvwxyz'
+             to 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
+
+       e050-move-dtl-rec.
+           move in-empno to dtl-empno
+           move ws-emply-name to dtl-full-nme
+           move ws-add-ln1 to dtl-add-ln
+           move ws-add-conty to dtl-county
+           move ws-add-eircde to dtl-eir-cde
+           move ws-add-contry-cde to dtl-country-cde
+           move in-edlevel to dtl-edlevel
+           move in-sex     to dtl-sex
+           move zeroes     to WS-HDTE
+           move in-birthdate(1:2) to DTL-BRTHDATE-DD
+           move in-birthdate(3:2) to DTL-BRTHDATE-MM
+           move in-birthdate(5:4) to DTL-BRTHDATE-YYYY
+           move in-salary to dtl-salary.
+           add +1         to ws-inp-rec.
+
+   
