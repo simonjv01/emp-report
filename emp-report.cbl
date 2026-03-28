@@ -21,11 +21,11 @@
        environment division.
        input-output section.
        file-control.
-           select INPUT-FILE assign to '/Users/simonvargas/emp.dat'
+           select INPUT-FILE assign to 'c:\Data\emp.dat'
                organization is line sequential 
                file status is WS-FILE-STATUS.
 
-           select OUTPUT-FILE assign to '/Users/simonvargas/rep.dat'
+           select OUTPUT-FILE assign to 'c:\Data\rep.dat'
                organization is line sequential 
                file status is WS-FILE-STATUS.
 
@@ -293,4 +293,27 @@
            move in-salary to dtl-salary.
            add +1         to ws-inp-rec.
 
-   
+       e060-write-dtl-rec.
+           write rep-file-rec from DTL-LINE.
+           initialize dtl-line
+           add +1                     to ws-out-rec.
+
+       e099-exit.
+           exit.
+      *     *--------------------------------------------------------*
+
+      *    This section closes file after processing all the records.
+       x000-clse-file section.
+       x010-prnt-trl-rec.
+           write rep-file-rec from RPT-BLK-LNE
+
+           move 'Total No of Records Read : ' to trl-line-msg
+           move WS-INP-REC                    to TRL-COUNT
+           write rep-file-rec from trl-line
+
+           move spaces                        to TRL-LINE-MSG
+           move zeroes                        to TRL-COUNT
+
+           write rep-file-rec from trl-line
+
+           
