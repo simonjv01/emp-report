@@ -267,4 +267,8 @@
                    ws-add-contry-cde
                 with pointer ws-pointer-fld-2
            end-unstring.
-      *     *--------------------------------------------------------*                        
+
+       e030-replace-string.
+           inspect ws-add-eircde
+             replacing all "." by " ".
+                                     
