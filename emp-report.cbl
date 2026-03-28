@@ -243,4 +243,20 @@
       *     *--------------------------------------------------------*
        d099-exit.
            exit.   
-      
+      *     *--------------------------------------------------------*
+      *    this section moves read data to report and then write them to
+      *    report.
+       e000-prnt-rept section.
+       e010-conc-emply-name.
+           move +1 to ws-pointer-fld-1
+           move spaces to ws-emply-name
+           string in-midinit delimited by size
+                    " " delimited by size
+                  in-firstnme delimited by space 
+                      " " delimited by size
+                  in-lastnme delimited by space
+                      into ws-emply-name
+                      with pointer ws-pointer-fld-1
+           end-string.
+           
+                              
