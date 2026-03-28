@@ -227,4 +227,20 @@
             move ws-tdydte-yyyy to hd-dte-yyyy.
 
        c099-exit.
+           exit.
+      
+      *     *--------------------------------------------------------*
+      d000-proc-recd section.
+           d010-read-file-rec.
+           perform until end-of-file
+               read emp-file
+                    at end
+                       set end-of-file to true
+                    not at end
+                       perform e000-prnt-rept
+               end-read
+           end-perform.
+      *     *--------------------------------------------------------*
+       d099-exit.
            exit.   
+      
