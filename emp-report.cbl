@@ -258,5 +258,13 @@
                       into ws-emply-name
                       with pointer ws-pointer-fld-1
            end-string.
-           
-                              
+
+       e020-split-address.
+           move +1 to ws-pointer-fld-2
+           move spaces to ws-emply-add
+           unstring in-add delimited by ";"
+              into ws-add-ln1 ws-add-conty ws-add-eircde,
+                   ws-add-contry-cde
+                with pointer ws-pointer-fld-2
+           end-unstring.
+      *     *--------------------------------------------------------*                        
