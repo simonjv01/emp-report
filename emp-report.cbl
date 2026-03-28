@@ -2,18 +2,18 @@
          program-id. emp-report.
          author. Simon Vargas.
          date-written. June 10, 2024.
-       
-      * 
+
+      *
       *--------------------------------------------------------*
       * proj: section 15.4 - Employee Report Program
-      * desc: This program demonstates the following concepts: 
+      * desc: This program demonstates the following concepts:
       *       - COBOL STRING statement
       *       - COBOL UNSTRING statement
       *       - COBOL INSPECT statement
       *       - COBOL REFERENCE modification
       *    Files:
       *          *INPUT-FILE - Employee data input file(Sequential)
-      *          *OUTPUT-FILE - Monthly employee report output file)       
+      *          *OUTPUT-FILE - Monthly employee report output file)
       * Note: This program does not have any exception handling for
       *       simplicity purposes.
       *--------------------------------------------------------*
@@ -22,12 +22,12 @@
        input-output section.
        file-control.
            select INPUT-FILE assign to 'c:\Data\emp.dat'
-               organization is line sequential 
-               file status is WS-FILE-STATUS.
+               organization is line sequential
+               file status is WS-EFILE-ST.
 
            select OUTPUT-FILE assign to 'c:\Data\rep.dat'
-               organization is line sequential 
-               file status is WS-FILE-STATUS.
+               organization is line sequential
+               file status is WS-RFILE-ST.
 
        data division.
        file section.
@@ -39,20 +39,20 @@
               05  in-lastname        pic x(17).
               05  in-workdept        pic x(03).
               05  in-phoneno         pic 9(03).
-              05  in-hiredate        pic 9(08). 
+              05  in-hiredate        pic 9(08).
               05  in-jobty           pic x(08).
               05  in-edlevel         pic 9(02).
-              05  in-sex             pic(01).
+              05  in-sex             pic x(01).
               05  in-birthdate       pic 9(08).
               05  in-salary          pic 9(07)v99.
               05  in-bonus           pic 9(07)v99.
               05  in-comm            pic 9(07)v99.
               05  filler             pic x(01).
               05  in-add             pic x(48).
-              05. filler             pic x(04).
+              05  filler             pic x(04).
 
        fd  OUTPUT-FILE.
-       01  rep-file-rec.             pic x(150).
+       01  rep-file-rec             pic x(150).
 
        working-storage section.
 
@@ -72,7 +72,7 @@
               10 WS-ADD-CONTY         PIC X(10)       VALUE SPACES.
               10 WS-ADD-CONTRY-CDE    PIC X(03)       VALUE SPACES.
            05 WS-POINTER-FLD-2       PIC S9(03)      VALUE ZEROES.
-           05 WS-EFILE-ST            PIC 9(02)       VALUE ZEROES. 
+           05 WS-EFILE-ST            PIC 9(02)       VALUE ZEROES.
            05 WS-RFILE-ST            PIC 9(02)       VALUE ZEROES.
 
        01 WS-COUNTERS.
@@ -82,12 +82,12 @@
 
        01 WS-TEMP-DATE.
            05 WS-HDTE                 PIC 9(08).
-           05 THIS REDEFINES WS-HDTE.
+           05 REDEFINES WS-HDTE.
               10 WS-HDTE-DD           PIC X(02).
               10 WS-HDTE-MM           PIC X(02).
               10 WS-HDTE-YYYY         PIC X(04).
            05 WS-TDY-DTE PIC 9(08).
-           05 THIS REDEFINES WS-TDY-DTE.
+           05 REDEFINES WS-TDY-DTE.
               10 WS-TDYDTE-YYYY       PIC 9(04).
               10 WS-TDYDTE-MM         PIC 9(02).
               10 WS-TDYDTE-DD         PIC 9(02).
@@ -96,7 +96,7 @@
        01 HEAD1.
            05 FILLER                 PIC X(60)       VALUE SPACES.
            05 FILLER                 PIC X(10) VALUE ' EMPLOYEE '.
-           05 FILLER                 PIC X(25) 
+           05 FILLER                 PIC X(25)
                                              VALUE 'MANAGEMENT SYSTEM.'.
            05 FILLER                 PIC X(41) VALUE SPACES.
            05 HD-DTE.
@@ -106,7 +106,7 @@
               10 FILLER               PIC X(01) VALUE '/'.
               10 HD-DTE-YYYY          PIC X(04) VALUE SPACES.
               10 FILLER               PIC X(01) VALUE '.'.
-              10 FILLER               PIC X(03) VALUE SPACES.    
+              10 FILLER               PIC X(03) VALUE SPACES.
 
        01 HEAD2.
            05 FILLER                 PIC X(70) VALUE SPACES.
@@ -159,7 +159,7 @@
              10 DTL-BRTHDATE-DD      PIC 9(02).
              10 FILLER               PIC X(01) VALUE '/'.
              10 DTL-BRTHDATE-MM      PIC 9(02).
-             10 FILLER               PIC X(01) VALUE '/'.    
+             10 FILLER               PIC X(01) VALUE '/'.
              10 DTL-BRTHDATE-YYYY    PIC 9(04).
            05 FILLER                 PIC X(03) VALUE SPACES.
            05 DTL-SALARY             PIC ZZZZZZ9.99.
@@ -174,16 +174,16 @@
        01 RPT-BLK-LNE.
            05 RPT-BLK-AST            PIC X(01) VALUE '*'.
            05 RPT-BLK-SPC            PIC X(149) VALUE SPACES.
-       
+
        procedure division.
-       declaratives
+       declaratives.
        decl-empfile section.
-           use after error procedure on emp-file.
+           use after error procedure on INPUT-FILE.
        empfile-error.
            display 'EMPLoyee file error - ', WS-EFILE-ST.
 
        decl-repfile section.
-           use after error procedure on rep-file.
+           use after error procedure on OUTPUT-FILE.
        repfile-error.
            display 'Report file error - ', WS-RFILE-ST.
        end-declaratives.
@@ -193,26 +193,26 @@
            perform a000-init-vals
            perform b000-open-files
            perform c000-prnt-hdrs
-           perform d000-proc-recd 
-           perform x000-clse-file 
+           perform d000-proc-recd
+           perform x000-clse-file
            stop run.
       *     *--------------------------------------------------------*
-      *   This section initialized all working-storage variables to their default values. 
+      *   This section initialized all working-storage variables to their default values.
        a000-init-vals section.
        a010-init-tmp-vals.
            initialize ws-counters, dtl-line, ws-temp-date,
                     ws-temp-pgm-vals.
-      *     *--------------------------------------------------------*    
+      *     *--------------------------------------------------------*
        a099-exit.
            exit.
-      *     *--------------------------------------------------------*    
+      *     *--------------------------------------------------------*
 
       *     *--------------------------------------------------------*
       *   This section opens the input and output files for processing.
-       b000-open-files section.    
+       b000-open-files section.
        b010-open-files.
-           open input emp-FILE
-                output rep-FILE.
+           open input INPUT-FILE
+                output OUTPUT-FILE.
       *     *--------------------------------------------------------*
        b099-exit.
            exit.
@@ -228,12 +228,12 @@
 
        c099-exit.
            exit.
-      
+
       *     *--------------------------------------------------------*
       d000-proc-recd section.
            d010-read-file-rec.
            perform until end-of-file
-               read emp-file
+               read INPUT-FILE
                     at end
                        set end-of-file to true
                     not at end
@@ -242,7 +242,7 @@
            end-perform.
       *     *--------------------------------------------------------*
        d099-exit.
-           exit.   
+           exit.
       *     *--------------------------------------------------------*
       *    this section moves read data to report and then write them to
       *    report.
@@ -252,9 +252,9 @@
            move spaces to ws-emply-name
            string in-midinit delimited by size
                     " " delimited by size
-                  in-firstnme delimited by space 
+                  in-firstname delimited by space
                       " " delimited by size
-                  in-lastnme delimited by space
+                  in-lastname delimited by space
                       into ws-emply-name
                       with pointer ws-pointer-fld-1
            end-string.
@@ -271,9 +271,9 @@
        e030-replace-string.
            inspect ws-add-eircde
              replacing all "." by " ".
-                                     
+
        e040-convert-string.
-           inspect ws-add-conty converting 
+           inspect ws-add-conty converting
              'abcdefghijklmnopqrstuvwxyz'
              to 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
 
@@ -314,11 +314,11 @@
            move spaces                        to TRL-LINE-MSG
            move zeroes                        to TRL-COUNT
 
-           write rep-file-rec from trl-line
+           write rep-file-rec from trl-line.
 
        x020-close-files.
-           close emp-file
-                 rep-file.
+           close INPUT-FILE
+                 OUTPUT-FILE.
 
        x020-print-totals.
            compute WS-SKIP-REC = WS-INP-REC - WS-OUT-REC.
@@ -328,6 +328,8 @@
            display 'Total skipped records    :', WS-SKIP-REC.
            display '****** END OF PROGRAM SUMMARY ***************'.
 
+
        x099-exit.
            exit.
-               
+
+       end PROGRAM emp-report.
