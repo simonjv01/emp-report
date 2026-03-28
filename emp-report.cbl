@@ -316,4 +316,18 @@
 
            write rep-file-rec from trl-line
 
-           
+       x020-close-files.
+           close emp-file
+                 rep-file.
+
+       x020-print-totals.
+           compute WS-SKIP-REC = WS-INP-REC - WS-OUT-REC.
+           display '****** PROGRAM SUMMARY *******************'.
+           display 'Total no of records read :', WS-INP-REC.
+           display 'Total no of record print :', WS-OUT-REC.
+           display 'Total skipped records    :', WS-SKIP-REC.
+           display '****** END OF PROGRAM SUMMARY ***************'.
+
+       x099-exit.
+           exit.
+               
